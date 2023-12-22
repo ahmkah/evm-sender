@@ -99,5 +99,6 @@ Specify in the SEND-BACK config:
 
 ## 2. Start:
 ```
+screen -S send
 evm-sender start
 ```
