@@ -1,6 +1,30 @@
 # EVM sender
 EVM sender
 
+## Sunucumuzu güncelleyelim:
+```
+sudo apt-get update
+sudo apt-get upgrade -y
+```
+## Aşağıdaki dosyaları yükleyin:
+
+```
+sudo apt install git curl wget tar lz4 unzip jq build-essential pkg-config clang bsdmainutils make ncdu -y
+```
+
+## Go Yüklüyoruz:
+
+```
+cd $HOME
+version="1.20.4"
+wget "https://golang.org/dl/go$version.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$version.linux-amd64.tar.gz"
+rm "go$version.linux-amd64.tar.gz"
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
 ## Clone the repository:
 ```
 git clone https://github.com/staketab/evm-sender.git
@@ -43,7 +67,7 @@ private_key = ""
 recipient = ""
 fixedValue = 0
 gas_limit = 22000
-memo = "From Staketab with LOVE!"
+memo = ""
 txcount = 3
 inTime = "60"
 min = 1000000000000000000
@@ -55,7 +79,7 @@ private_key = ""
 recipient = ""
 fixedValue = 1000000000000000000
 gas_limit = 22000
-memo = "From Staketab with LOVE!"
+memo = ""
 txCount = 1
 inTime = "60"
 ```
